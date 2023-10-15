@@ -1,0 +1,23 @@
+.loading-indicator {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   height: 30px;
+   width: 30px;
+   background-color: transparent;
+   border-radius: 50px;
+   border-bottom: 2px solid #1877f2;
+   border-left: 2px solid #1877f2;
+   animation: loading-animation .4s infinite linear;
+}
+
+@keyframes loading-animation {
+   from {
+      transform: translate(-50%, -50%) rotate(0deg);
+   }
+
+   to {
+      transform: translate(-50%, -50%) rotate(360deg)
+   }
+}
