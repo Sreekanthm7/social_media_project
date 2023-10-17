@@ -59,7 +59,7 @@ export function AddPostForm({ modalCloseFn }: AddPostFormProps) {
               <label htmlFor="image">Upload Image</label>
               <ImageUploader />
             </div>
-            <div>
+            {/* <div>
               <label htmlFor="title">Title</label>
               <input
                 type="text"
@@ -73,7 +73,7 @@ export function AddPostForm({ modalCloseFn }: AddPostFormProps) {
               {formik.errors.body ? (
                 <span className="error">{formik.errors.title}</span>
               ) : null}
-            </div>
+            </div> */}
             <div>
               <label htmlFor="body">Body</label>
               <textarea
@@ -89,7 +89,7 @@ export function AddPostForm({ modalCloseFn }: AddPostFormProps) {
                 <span className="error">{formik.errors.body}</span>
               ) : null}
             </div>
-            <div>
+            <div className="pt-8">
               <label htmlFor="title">Tag Friends</label>
               <input
                 type="text"

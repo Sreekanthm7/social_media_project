@@ -23,3 +23,25 @@ export const GET_COMMENTS_USER = (userId: number) => gql`
     }
   }
 `
+
+// query {
+//   	friendsCollection(filter: {follower: {eq: 3}}) {
+//       edges {
+//         node {
+//   				following
+
+//         }
+//       }
+//     }
+//   }
+
+//   query {
+//     postsCollection(filter:{ user_id:{eq: 2}}){
+//       edges{
+//         node{
+//           content
+//           mentions
+//         }
+//       }
+//     }
+//   }
