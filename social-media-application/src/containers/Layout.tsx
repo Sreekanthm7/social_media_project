@@ -9,7 +9,6 @@ const Layout = ({ children }: LayoutProps) => {
    return (
 
       <div>
-         <NavigationBar />
          {children}
       </div>
 

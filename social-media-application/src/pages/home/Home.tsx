@@ -1,13 +1,15 @@
 import { Comments } from "../../components/comments"
 import { PostsContainer } from "../../components/posts"
 import "./Home.css"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useGetPosts } from "../../api/"
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import { RoutPath } from "../../routes/mainRoutes"
 import { AddPostForm } from "../../components/posts"
 import { userImgs } from "../../constants/images"
 import { useCustomDeletePosts } from "../../api"
+import { NavigationBar } from "../../components/navbar/NavigationBar"
+import { supabase } from "../.."
 
 export function Home() {
   const { isLoading, isError, data } = useGetPosts()
@@ -78,8 +80,30 @@ export function Home() {
     ))
   }
 
+  const navigate = useNavigate()
+  const [user, setUser] = useState({})
+
+  useEffect(() => {
+    async function getUserDate() {
+      await supabase.auth.getUser().then((value) => {
+        if (value?.data?.user) {
+          console.log(value.data.user)
+          setUser(value.data.user)
+        }
+      })
+    }
+    getUserDate()
+  }, [])
+
+  async function signOutUser() {
+    const { error } = await supabase.auth.signOut()
+    navigate("/")
+  }
+
   return (
     <div className="main-home">
+      <NavigationBar />
+      <button onClick={() => signOutUser()}>signOut</button>
       {modalIsOpen ? (
         <Comments closeCommentFn={closeComment} postID={postID} />
       ) : null}

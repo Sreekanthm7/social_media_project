@@ -1,44 +1,32 @@
-import { UserType } from '../../types/userDataTypes'
-import './UserContainer.css'
-import '../comments/CommentCard.css'
+import { UserType } from "../../types/userDataTypes"
+import "./UserContainer.css"
+import "../comments/CommentCard.css"
+import { UsersDetails, UsersList } from "../../graphql/types"
 
 type UserContainerProps = {
-   data: UserType,
-   imgUrl: string,
-   setUserID: React.Dispatch<React.SetStateAction<number>>
-   modalStatus: React.Dispatch<React.SetStateAction<boolean>>
-   editFormOpenFn:React.Dispatch<React.SetStateAction<boolean>>
+  data: UsersList
 }
 
-export function UserContainer({ data, imgUrl, setUserID, modalStatus,editFormOpenFn }: UserContainerProps) {
+export function UserContainer({ data }: UserContainerProps) {
+  console.log(data, "hahah")
 
-   function removeUser() {
-      modalStatus(true)
-      setUserID(data.id)
-   }
-   
-   function editUser(){
-      editFormOpenFn(true)
-      setUserID(data.id)
-   }
-
-   return (
-      <div className='main-user'>
-         <div className={`active-status ${data.status === 'active' ? 'active' : 'not-active'}`}></div>
-         <button className="edit-user" onClick={editUser}>
-         <i className="fa-solid fa-pen"></i>
-         </button>
-         <button className='remove-comment' onClick={removeUser}>
-            <i className="fa-solid fa-trash"></i>
-         </button>
-         <div className="user-icon">
-            <img src={imgUrl} alt="" />
-         </div>
-         <div className="user-details">
-            <p className='user-name'>{data.name}</p>
-            <p className='email'>{data.email}</p>
-         </div>
-      </div>
-   )
+  return (
+    <>
+      {data.usersCollection.edges.map((item) => (
+        <div className="main-user">
+          <div className="user-details-container">
+            <div className="user-icon">
+              <img src={item.node.img} alt="" />
+            </div>
+            <div className="user-details">
+              <p className="user-name">{item.node.username}</p>
+              <p className="email">{item.node.email}</p>
+            </div>
+          </div>
+          <button className="edit-user">follow</button>
+        </div>
+      ))}
+    </>
+  )
 }
 // 34 (look)

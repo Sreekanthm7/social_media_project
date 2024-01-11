@@ -6,10 +6,9 @@ interface Props {
 }
 
 export function Comments({ data }: Props) {
-
-    if(!data || !data.commentsCollection) {
-        return <div>Loading...</div>
-    }
+  if (!data || !data.commentsCollection) {
+    return <div>Loading...</div>
+  }
   return (
     <>
       <h2>Comments</h2>

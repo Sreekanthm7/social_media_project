@@ -17,7 +17,7 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 })
 
-const supabase = createClient(
+export const supabase = createClient(
   "https://jtufzitlmgfxgsawjmxc.supabase.co",
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp0dWZ6aXRsbWdmeGdzYXdqbXhjIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTcxMjY2ODQsImV4cCI6MjAxMjcwMjY4NH0.wPNnnNd2OrV3ARpadCs4qlsTgNEHnQHNc7raEME_GOQ"
 )

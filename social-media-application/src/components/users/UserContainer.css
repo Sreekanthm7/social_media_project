@@ -3,83 +3,54 @@
 } */
 
 .main-user {
-   position: relative;
-   display: flex;
-   align-items: center;
-   margin-bottom: 20px;
-   padding: 10px 0;
-   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
-   cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+  cursor: pointer;
+}
+
+.user-details-container {
+  display: flex;
+  align-items: center;
 }
 
 .user-icon {
-   height: 60px;
-   width: 60px;
-   margin-right: 20px;
-   border-radius: 50px;
-   overflow: hidden;
+  height: 60px;
+  width: 60px;
+  margin-right: 20px;
+  border-radius: 50px;
+  overflow: hidden;
 }
 
 .user-icon img {
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .user-details p {
-   margin: 0;
-}
-
-.delete-user {
-   position: absolute;
-   padding: 10px 20px;
-   border: none;
-   font-size: 16px;
-   border-radius: 10px;
-   background-color: red;
-   color: #fff;
-   font-weight: 700;
-   right: 50px;
-   cursor: pointer;
-}
-
-.delete-user:hover {
-   background-color: rgba(255, 0, 0, 0.754);
-}
-
-.active-status {
-   position: absolute;
-   bottom: 6px;
-   left: 39px;
-   height: 15px;
-   width: 15px;
-   border: 1px solid gold;
-   border-radius: 50px;
-   z-index: 1000;
-}
-
-.active-status.active {
-   background-color: green;
-}
-
-.active-status.not-active {
-   background-color: red;
+  margin: 0;
 }
 
 .edit-user {
-   position: absolute;
-   right: 50px;
-   height: 30px;
-   width: 30px;
-   font-size: 18px;
-   border-radius: 50px;
-   border: none;
-   background-color: #fff;
-   color: #888;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  width: 80px;
+  padding: 20px;
+  font-size: 15px;
+  border-radius: 50px;
+  border: none;
+  background-color: rgba(0, 133, 250, 0.849);
+  color: #fff;
 }
 
-.edit-user:hover{
-   color:#000
+.edit-user:hover {
+  color: #000;
 }
 
 /* 69 (look) */

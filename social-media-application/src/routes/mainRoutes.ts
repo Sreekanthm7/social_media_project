@@ -1,5 +1,7 @@
 export const RoutPath = {
-   home: '/',
-   usersPage: '/users',
-   aboutPage: '/about'
+  login: "/",
+  //   login: "/login",
+  home: "/home",
+  usersPage: "/users",
+  aboutPage: "/about",
 }
