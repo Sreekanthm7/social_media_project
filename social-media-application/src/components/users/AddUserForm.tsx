@@ -96,7 +96,7 @@ export function AddUserForm({ setModalFn }: AddUserFormProps) {
                   </select>
                </div>
                <div className="submit-button">
-                  <button className='submit' type='submit'>Submit</button>
+                  <button className='submit' type='submit'>submit</button>
                </div>
             </form>
          </div>
