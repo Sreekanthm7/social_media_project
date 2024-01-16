@@ -89,9 +89,9 @@ export function AddUserForm({ setModalFn }: AddUserFormProps) {
                   <input type="radio" name="gender" id='female' value="female" onChange={formik.handleChange} />
                </div>
                <div className="user-fields">
-                  <label htmlFor="status">Status</label>
+                  <label htmlFor="status">status</label>
                   <select name="status" id="status" value={formik.values.status} onChange={formik.handleChange}>
-                     <option value="active">Active</option>
+                     <option value="active">active</option>
                      <option value="inactive">Inactive</option>
                   </select>
                </div>
