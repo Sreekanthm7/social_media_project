@@ -16,7 +16,7 @@ a {
 
 .nav-bar {
   display: flex;
-  max-width: 1600px;
+  max-width: 1500px;
   margin: 0 auto;
   justify-content: space-between;
   align-items: baseline;
